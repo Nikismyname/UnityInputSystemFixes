@@ -159,6 +159,20 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+            if (this._input.Use1)
+                Debug.Log("use1");
+            
+            if (this._input.Use2)
+                Debug.Log("use2");
+            
+            if (this._input.Use3)
+                Debug.Log("use3");
+
+            // the switch with this package is permanent, so you need to reset the value back ot false manually.
+            this._input.Use1 = false;
+            this._input.Use2 = false;
+            this._input.Use3 = false;
         }
 
         private void LateUpdate()
